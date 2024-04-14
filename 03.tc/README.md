@@ -27,26 +27,12 @@ filter被挂载到qdisc或class上，用于实现具体的过滤逻辑，而clas
 
 ## 命令
 ```bash
-# 最开始的状态
-tc qdisc show dev ens33
-qdisc noqueue 0: root refcnt 2
-
 # 创建clsact
 tc qdisc add dev ens33 clsact
-# 再次查看，观察有什么不同
+
+# 查看
 tc qdisc show dev ens33
 
-qdisc noqueue 0: root refcnt 2
-qdisc clsact ffff: parent ffff:fff1
-    
-# 加载TC BPF程序到容器的veth网卡上
+# 加载TC BPF程序
 tc filter add dev ens33 egress bpf da obj tc-xdp-drop-tcp.o sec tc
-
-# 再次查看，观察有什么不同
-> tc qdisc show dev ens33
-    qdisc noqueue 0: root refcnt 2
-    qdisc clsact ffff: parent ffff:fff1
-    > tc filter show dev ens33 egress
-    filter protocol all pref 49152 bpf chain 0
-    filter protocol all pref 49152 bpf chain 0 handle 0x1 tc-xdp-drop-tcp.o:[tc] direct-action not_in_hw id 24 tag 9c60324798bac8be jited
 ```
