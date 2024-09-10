@@ -1,11 +1,11 @@
 
 bpf1:
 	clang -O2 -g -target bpf -c tc_k.c -o tc_k.o
-	clang tc_u.c -lelf -lbpf -o tc
+	clang tc_u.c -lelf -lbpf -o main
 
 clean:
 	rm -rf *.o
-	rm -rf tc
+	rm -rf main
 
 install:
 	tc qdisc add dev ens33 clsact
