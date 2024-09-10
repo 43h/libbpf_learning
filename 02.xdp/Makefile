@@ -1,11 +1,11 @@
 
 bpf1:
 	clang -O2 -g -target bpf -c bpf_k.c -o bpf_k.o
-	clang bpf_u.c -lelf -lbpf -o bpf
+	clang bpf_u.c -lelf -lbpf -o main
 
 clean:
 	rm -rf *.o
-	rm -rf bpf
+	rm -rf main
 
 install:
 	ip link set dev ens33 xdp obj bpf_k.o sec xdp
