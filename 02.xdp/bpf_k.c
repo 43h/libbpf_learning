@@ -1,4 +1,13 @@
-// #include "../vmlinux.h"
+/**
+ * @file bpf_k.c
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2024-09-11
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <linux/bpf.h>
 #include <bpf/bpf_helpers.h>
 #include <bpf/bpf_endian.h>
