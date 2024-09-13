@@ -70,6 +70,7 @@ system calls
 * 1. libbpf环境安装
 * 2. xdp, 打印tcp端口
 * 3. tc, 打印IP信息
+* 4. tracepoint,
 
 
 ## 示例
@@ -108,24 +109,17 @@ system calls
 
 ## Todo
 ---
-* xdp
-* tc
 * bpf_xdp_sk_lookup_tcp
 * bpf_xdp_skc_lookup_tcp
 * bpf_skc_lookup_tcp
 * bpf_fib_lookup
 * bpf_skb_load_bytes
-
+* bpf_sk_lookup
+* bpf_sk_assign
 
 BPF_PROG_TYPE_SOCK_OPS
 
 bpf_redirect_map
-
-
-
-bpf_sk_lookup
-bpf_sk_assign
-
 
 ### xdp-->lvs
 SEC("tp_btf/inet_sock_set_state")：关注 tcp 状态转变
