@@ -1,1 +1,6 @@
 *.o
+Todo/
+demo/
+*.c
+*.h
+tracepoint/
