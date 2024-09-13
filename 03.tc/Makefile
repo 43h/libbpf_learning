@@ -1,5 +1,5 @@
 
-bpf1:
+all:
 	clang -O2 -g -target bpf -c tc_k.c -o tc_k.o
 	clang tc_u.c -lelf -lbpf -o main
 
