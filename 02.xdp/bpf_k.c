@@ -17,13 +17,6 @@
 #include <linux/tcp.h>
 #include <linux/ip.h>
 
-struct {
-	__uint(type, BPF_MAP_TYPE_HASH);
-	__uint(max_entries, 4096);
-	__type(key, unsigned int);
-	__type(value, unsigned long);
-} my_map SEC(".maps");
-
 SEC("xdp")
 int xdp_pass(struct xdp_md *ctx)
 {
