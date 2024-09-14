@@ -53,13 +53,6 @@ int xdp_pass(struct xdp_md *ctx)
     struct tcphdr *tcp = data + sizeof(struct ethhdr) + sizeof(struct iphdr); //获取tcp头部
     static char log[] = "tcp port: %u-->%u\n";
     bpf_trace_printk(log, sizeof(log), bpf_ntohs(tcp->source), bpf_ntohs(tcp->dest)); //打印源和目的端口
-    
-    if(tcp->source == bpf_htons(22)) //Todo: 过滤ssh流量
-    {
-        unsigned int key = 0;
-        unsigned long time_ns = bpf_ktime_get_ns();
-        bpf_map_update_elem(&my_map, &key, &time_ns, BPF_ANY);
-    }
     return XDP_PASS;
 }
 
