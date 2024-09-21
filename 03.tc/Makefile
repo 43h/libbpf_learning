@@ -14,3 +14,6 @@ install:
 uninstall:
 	tc filter del dev ens33 ingress
 	tc qdisc del dev ens33 clsact
+
+show:
+	tc -s filter show dev ens33
