@@ -3,4 +3,4 @@ all:
 	gcc -o client proxy_client.c
 
 clean:
-	rm -f main
+	rm -f server client
