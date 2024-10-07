@@ -65,6 +65,107 @@ llvm于2015年推出了可以将由高级语言编写的代码编译为eBPF字�
 userspace functions (uprobes)
 system calls
 
+1. **XDP 程序**:
+   ```c
+   SEC("xdp")
+   ```
+
+2. **TC（Traffic Control）程序**:
+   ```c
+   SEC("tc")
+   ```
+
+3. **Socket Filter 程序**:
+   ```c
+   SEC("socket")
+   ```
+
+4. **kprobe 程序**:
+   ```c
+   SEC("kprobe/<function_name>")
+   ```
+
+5. **kretprobe 程序**:
+   ```c
+   SEC("kretprobe/<function_name>")
+   ```
+
+6. **tracepoint 程序**:
+   ```c
+   SEC("tracepoint/<category>/<event>")
+   ```
+
+7. **raw tracepoint 程序**:
+   ```c
+   SEC("raw_tracepoint/<event>")
+   ```
+
+8. **perf_event 程序**:
+   ```c
+   SEC("perf_event")
+   ```
+
+9. **cgroup/skb 程序**:
+   ```c
+   SEC("cgroup/skb")
+   ```
+
+10. **cgroup/sock 程序**:
+    ```c
+    SEC("cgroup/sock")
+    ```
+
+11. **cgroup/sock_addr 程序**:
+    ```c
+    SEC("cgroup/sock_addr")
+    ```
+
+12. **cgroup/dev 程序**:
+    ```c
+    SEC("cgroup/dev")
+    ```
+
+13. **cgroup/bind4 程序**:
+    ```c
+    SEC("cgroup/bind4")
+    ```
+
+14. **cgroup/bind6 程序**:
+    ```c
+    SEC("cgroup/bind6")
+    ```
+
+15. **cgroup/connect4 程序**:
+    ```c
+    SEC("cgroup/connect4")
+    ```
+
+16. **cgroup/connect6 程序**:
+    ```c
+    SEC("cgroup/connect6")
+    ```
+
+17. **cgroup/post_bind4 程序**:
+    ```c
+    SEC("cgroup/post_bind4")
+    ```
+
+18. **cgroup/post_bind6 程序**:
+    ```c
+    SEC("cgroup/post_bind6")
+    ```
+
+19. **cgroup/sendmsg4 程序**:
+    ```c
+    SEC("cgroup/sendmsg4")
+    ```
+
+20. **cgroup/sendmsg6 程序**:
+    ```c
+    SEC("cgroup/sendmsg6")
+    ```
+
+这些段名帮助内核识别和加载不同类型的eBPF程序。根据具体需求选择合适的段名来编写eBPF程序。
 
 ## libbpf学习示例
 * 1. libbpf环境安装
