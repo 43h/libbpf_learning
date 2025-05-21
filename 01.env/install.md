@@ -4,7 +4,7 @@
 
 ## 测试环境
 * 系统：Ubuntu 24.04.1 LTS
-* 内核：6.8.0-45-generic
+* 内核：6.8.0-60-generic
 
 ## 安装
 ```shell
