@@ -171,42 +171,7 @@ system calls
 * 1. libbpf环境安装
 * 2. xdp, 打印tcp端口
 * 3. tc, 打印IP信息
-* 4. tracepoint,
-
-
-## 示例
-- [lesson 0-install](src/0-install/README.md) libbpf开发环境配置
-- [lesson 1-helloworld](src/1-helloworld/README.md) 使用 eBPF 开发最简单的「Hello World」程序，介绍 eBPF 的基本框架和开发流程
-- [lesson 2-kprobe-unlink](src/2-kprobe-unlink/README.md) 在 eBPF 中使用 kprobe 捕获 unlink 系统调用
-- [lesson 3-fentry-unlink](src/3-fentry-unlink/README.md) 在 eBPF 中使用 fentry 捕获 unlink 系统调用
-- [lesson 4-opensnoop](src/4-opensnoop/README.md) 使用 eBPF 捕获进程打开文件的系统调用集合，使用全局变量在 eBPF 中过滤进程 pid
-- [lesson 5-uprobe-bashreadline](src/5-uprobe-bashreadline/README.md) 在 eBPF 中使用 uprobe 捕获 bash 的 readline 函数调用
-- [lesson 6-sigsnoop](src/6-sigsnoop/README.md) 捕获进程发送信号的系统调用集合，使用 hash map 保存状态
-- [lesson 7-execsnoop](src/7-execsnoop/README.md) 捕获进程执行时间，通过 perf event array 向用户态打印输出
-- [lesson 8-execsnoop](src/8-exitsnoop/README.md) 捕获进程退出事件，使用 ring buffer 向用户态打印输出
-- [lesson 9-runqlat](src/9-runqlat/README.md) 捕获进程调度延迟，以直方图方式记录
-- [lesson 10-hardirqs](src/10-hardirqs/README.md) 使用 hardirqs 或 softirqs 捕获中断事件
-- [lesson 11-bootstrap](src/11-bootstrap/README.md) 使用 libbpf-boostrap 为 eBPF 编写原生的 libbpf 用户态代码，并建立完整的 libbpf 工程。
-- [lesson 12-profile](src/12-profile/README.md) 使用 eBPF 进行性能分析
-- [lesson 13-tcpconnlat](src/13-tcpconnlat/README.md) 记录 TCP 连接延迟，并使用 libbpf 在用户态处理数据
-- [lesson 14-tcpstates](src/14-tcpstates/README.md) 记录 TCP 连接状态与 TCP RTT
-- [lesson 15-javagc](src/15-javagc/README.md) 使用 usdt 捕获用户态 Java GC 事件耗时
-- [lesson 16-memleak](src/16-memleak/README.md) 检测内存泄漏
-- [lesson 17-biopattern](src/17-biopattern/README.md) 捕获磁盘 IO 模式
-- [lesson 18-further-reading](src/18-further-reading/README.md) 更进一步的相关资料？
-- [lesson 19-lsm-connect](src/19-lsm-connect/README.md) 使用 LSM 进行安全检测防御
-- [lesson 20-tc](src/20-tc/README.md) 使用 eBPF 进行 tc 流量控制
-- [lesson 21-xdp](src/21-xdp/README.md) 使用 eBPF 进行 XDP 报文处理
-- [在 Android 上使用 eBPF 程序](src/22-android/README.md)
-- [使用 eBPF 追踪 HTTP 请求或其他七层协议](src/23-http/README.md)
-- [使用 sockops 加速网络请求转发](src/29-sockops/README.md)
-- [使用 eBPF 隐藏进程或文件信息](src/24-hide/README.md)
-- [使用 bpf_send_signal 发送信号终止进程](src/25-signal/README.md)
-- [使用 eBPF 添加 sudo 用户](src/26-sudo/README.md)
-- [使用 eBPF 替换任意程序读取或写入的文本](src/27-replace/README.md)
-- [BPF的生命周期：使用 Detached 模式在用户态应用退出后持续运行 eBPF 程序](src/28-detach/README.md)
-
-
+* 4. tracepoint
 
 ## Todo
 ---
