@@ -1,7 +1,7 @@
 # sk_reuseport
 ---
 
-see the code£¡
+see the codeï¼
 ```shell
 # see the log
 cat /sys/kernel/debug/tracing/trace_pipe
