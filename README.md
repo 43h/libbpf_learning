@@ -48,10 +48,11 @@ llvm于2015年推出了可以将由高级语言编写的代码编译为eBPF字�
 
 
 ## eBPF可使用函数类型
+- xdp：网络数据处理函数，拦截和处理网络数据包。
+- tc:
 - kprobe：插探函数，在指定的内核函数前或后执行。
 - tracepoint：跟踪点函数，在指定的内核跟踪点处执行。
 - raw_tracepoint：原始跟踪点函数，在指定的内核原始跟踪点处执行。
-- xdp：网络数据处理函数，拦截和处理网络数据包。
 - perf_event：性能事件函数，用于处理内核性能事件。
 - kretprobe：函数返回插探函数，在指定的内核函数返回时执行。
 - tracepoint_return：跟踪点函数返回，在指定的内核跟踪点返回时执行。
@@ -65,45 +66,11 @@ llvm于2015年推出了可以将由高级语言编写的代码编译为eBPF字�
 userspace functions (uprobes)
 system calls
 
-1. **XDP 程序**:
-   ```c
-   SEC("xdp")
-   ```
-
-2. **TC（Traffic Control）程序**:
-   ```c
-   SEC("tc")
-   ```
-
 3. **Socket Filter 程序**:
    ```c
    SEC("socket")
    ```
 
-4. **kprobe 程序**:
-   ```c
-   SEC("kprobe/<function_name>")
-   ```
-
-5. **kretprobe 程序**:
-   ```c
-   SEC("kretprobe/<function_name>")
-   ```
-
-6. **tracepoint 程序**:
-   ```c
-   SEC("tracepoint/<category>/<event>")
-   ```
-
-7. **raw tracepoint 程序**:
-   ```c
-   SEC("raw_tracepoint/<event>")
-   ```
-
-8. **perf_event 程序**:
-   ```c
-   SEC("perf_event")
-   ```
 
 9. **cgroup/skb 程序**:
    ```c
